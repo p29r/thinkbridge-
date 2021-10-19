@@ -1,0 +1,93 @@
+{
+  "Inventory": [
+    {
+      "name": "Orange",
+      "description": "fresh Oranges",
+      "price": 20000,
+      "quantity": 200,
+      "category": "food",
+      "id": 1
+    },
+    {
+      "name": "Mangoes",
+      "description": "Frozon Oranges",
+      "price": 200,
+      "quantity": "206",
+      "category": "Food",
+      "id": 2
+    },
+    {
+      "name": "hair dryer",
+      "description": "philipes",
+      "price": 500,
+      "quantity": 200,
+      "category": "Electronics",
+      "id": 3
+    },
+    {
+      "name": "newa ",
+      "description": "sdkmsds",
+      "price": "022",
+      "quantity": "011",
+      "category": "Other",
+      "id": 4
+    },
+    {
+      "name": "s",
+      "description": "sss",
+      "price": "033",
+      "quantity": 0,
+      "category": "Other",
+      "id": 5
+    },
+    {
+      "name": "test",
+      "description": "rfsff",
+      "price": "20",
+      "quantity": "30",
+      "category": "Cloths",
+      "id": 6
+    }
+  ],
+  "Employee": [
+    {
+      "name": "raj kumar",
+      "address": "pune",
+      "id": 122
+    },
+    {
+      "name": "nnn",
+      "address": "nmm",
+      "id": 123
+    }
+  ],
+  "Company": [
+    {
+      "name": "abeeec",
+      "address": "mumbai",
+      "id": 42
+    },
+    {
+      "name": "exela nnnn",
+      "address": "pune sb road",
+      "id": 43
+    },
+    {
+      "name": "azzz",
+      "address": "a",
+      "id": 44
+    }
+  ],
+  "Manager": [
+    {
+      "name": "kalpesh shing",
+      "address": "pune sb road",
+      "id": 1223
+    },
+    {
+      "name": "rahul aggrwal",
+      "address": "pune",
+      "id": 12662
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+<div class="row">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Enter Name" variant="standard" value="" [(ngModel)]="gridService.currentData.name" id="name" name="name" #name="ngModel" required>
+        <mat-hint  align="start" *ngIf="name.invalid && (name.dirty || name.touched)" style="color: red;padding: 0;" class="alert">
+            <span *ngIf="name.errors?.required"> Name is required. </span>
+        </mat-hint>
+    </mat-form-field>
+</div>
+<div class="row">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Description</mat-label>
+        <textarea matInput placeholder="Enter description..."
+            [(ngModel)]="gridService.currentData.description"
+            id="description" name="description" #description="ngModel" required></textarea>
+        <mat-hint align="end" *ngIf="description.value != null">{{description.value.length}} / 256</mat-hint>
+        <mat-hint  align="start" *ngIf="description.invalid && (description.dirty || description.touched)" style="color: red;padding: 0;" class="alert">
+            <span *ngIf="description.errors?.required"> Description is required. </span>
+        </mat-hint>
+    </mat-form-field>
+</div>
+<div class="row">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Price</mat-label>
+        <input matInput placeholder="Enter Name" value="" [(ngModel)]="gridService.currentData.price" id="price" name="price" #price="ngModel" required>
+        <mat-hint  align="start" *ngIf="price.invalid && (price.dirty || price.touched)" style="color: red;padding: 0;" class="alert">
+            <span *ngIf="price.errors?.required"> Price is required. </span>
+        </mat-hint>
+    </mat-form-field>
+</div>
+<div class="row">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Quantity</mat-label>
+        <input matInput placeholder="Enter Name" value="" [(ngModel)]="gridService.currentData.quantity"
+        id="quantity" name="quantity" #quantity="ngModel" required>
+        <mat-hint  align="start" *ngIf="quantity.invalid && (quantity.dirty || quantity.touched)" style="color: red;padding: 0;" class="alert">
+            <span *ngIf="quantity.errors?.required"> Quantity is required. </span>
+        </mat-hint>
+    </mat-form-field>
+</div>
+<div class="row">
+    <mat-form-field appearance="fill" class="" width=100>
+        <mat-label>Category</mat-label>
+        <mat-select [(ngModel)]="gridService.currentData.category" id="category" name="category" #category="ngModel" required>
+            <mat-option *ngFor="let category of categories" [value]="category">
+                {{category}}
+            </mat-option>
+            
+        </mat-select>
+        <mat-hint  align="start" *ngIf="category.invalid && (category.dirty || category.touched)" style="color: red;padding: 0;" class="alert">
+            <span *ngIf="category.errors?.required"> Category is required. </span>
+        </mat-hint>
+    </mat-form-field>
+</div>
+<div class="row">
+    <button type="submit" class="btn btn-primary mt-3" (click)="saveData(gridService.currentData)"
+    [disabled]="category.invalid || quantity.invalid || price.invalid || description.invalid || name.invalid">Submit</button>
+</div>

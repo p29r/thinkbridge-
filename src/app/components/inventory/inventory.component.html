@@ -1,0 +1,8 @@
+<div class=" row">
+    <div class="col-md-6 p-4">
+        <app-grid (currentData)="saveOrCreate($event)"></app-grid>
+    </div>
+    <div class="col-md-6 p-4">
+        <app-grid-list [dataSource]="inventories" (currentID)="getCurrentID($event)"></app-grid-list>
+    </div>
+</div>
